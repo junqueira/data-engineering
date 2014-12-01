@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 	resources :costs do
 	  collection { post :import }
 	end
+	resources :data_importer, only: [:index, :create]
 
   # You can have the root of your site routed with "root"
   root 'costs#index'

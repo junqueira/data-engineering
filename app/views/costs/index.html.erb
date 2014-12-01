@@ -1,12 +1,25 @@
 <%- model_class = Cost -%>
-<div class="page-header">
+<!-- <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
   <h4>Import Products</h4>
 		<%= form_tag import_costs_path, multipart: true do %>
 		  <%= file_field_tag :file %>
 		  <%= submit_tag "Import" %>
 		<% end %>
-</div>
+</div> -->
+
+<% if params[:notice] %>
+    <p id='notice'><%= params[:notice] %></p>
+<% end %>
+
+<% if params[:error] %>
+    <p id='error'><%= params[:error] %></p>
+<% end %>
+<h3>Import Purchase Data</h3>
+<%= form_tag data_importer_index_path, multipart: true do %>
+    <%= file_field_tag :purchases_file %>
+    <%= submit_tag 'Upload File' %>
+<% end %>
 
 <table class="table table-striped">
   <thead>
