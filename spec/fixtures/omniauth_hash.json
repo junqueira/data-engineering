@@ -1,0 +1,16 @@
+{
+  "info": {
+    "name": "user omniauth test",
+    "email": "user@omniauth.com"
+  },
+  "credentials": {
+    "token": "12345678987654321"
+  },
+  "provider": "github",
+  "uid": "100",
+  "extra": {
+    "raw_info": {
+      "avatar_url": "http://fakeimage.jpeg"
+    }
+  }
+}
